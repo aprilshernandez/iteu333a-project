@@ -26,18 +26,32 @@ public class Iteu333aProject {
     
     public static void compiler(){
         String str = null;
+        int strlen=0;
+        
         try {
             Scanner input;
             input = new Scanner(new File("input.txt"));
             
-            if(input.hasNextLine()){
+            while(input.hasNextLine()){
                 str = input.nextLine();
-                for(int i=0; i<str.length(); i++){
-                    if (str.charAt(i) == '/' && str.charAt(i-1) == '/'){
-                        System.out.println(str.substring(0, i-1)+"COMMENT");//CHECKING IF A LINE CONTAINS A COMMENT
-                        
+                strlen = str.length();
+                //COMMENT
+                if (str.contains("//")){
+                    for (int i=0; i<str.length(); i++){
+                        if (str.charAt(i) == '/' && str.charAt(i-1) == '/'){
+                            System.out.println(str.substring(0, i-1)+"COMMENT");//CHECKING IF A LINE CONTAINS A COMMENT
+                            strlen = i-1;
+                        }
                     }
                 }
+                //CHECK SEMI COLON
+                if (!str.contains("for(") || !str.contains("for (") && !str.contains("if(") || !str.contains("if (") && !str.contains("switch(") || !str.contains("switch (")){
+                    System.out.println("check");
+                    if (str.charAt(strlen-1) != ';'){
+                        System.out.println("SYNTAX ERROR");
+                    }
+                }
+                
             }
             
         } catch (FileNotFoundException ex) {
