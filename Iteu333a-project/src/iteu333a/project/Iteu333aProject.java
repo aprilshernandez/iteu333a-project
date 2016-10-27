@@ -57,6 +57,11 @@ public class Iteu333aProject {
                     str = input.nextLine();
                     System.out.println("DOUBLE SPACE");//CHECKING IF HAS A DOUBLE SPACE 
                }
+                
+                if (str.contains(str)){
+                    System.out.println("Length of string: "+str.length());
+                    
+                }
 
             }
             
