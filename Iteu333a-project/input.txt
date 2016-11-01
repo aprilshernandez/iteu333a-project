@@ -1,3 +1,20 @@
-int a = 1;
-a = a+5+4;
-System.out.println(a);
+int a = 1  //syntax error, no semicolon
+
+yo = lo //syntax error, no data type
+
+int   sp         =  3; //error. you had enough space. 1 space only
+
+int b = 2;
+
+int c = "Yo world"; //syntax error
+
+String d = "Ed " //syntax error
+
+String = e "Pogi"; //syntax error
+
+labas(a+b) //syntax error
+
+labas(d+e); //output is "Ed Pogi"
+
+
+makeCompyut(3+1/1); //should be 4

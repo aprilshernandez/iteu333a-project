@@ -130,10 +130,10 @@ public class Iteu333aProject {
                         } 
                     }
                     else if (temp.contains("labas(")){
-                        str.replaceAll("labas", "System.out.println");
+                        temp = temp.replaceAll("labas", "System.out.println");
                     }
                     else if (temp.contains("makeCompyut(")){
-                        str.replaceAll("makeCompyut", "System.out.println");
+                        temp = temp.replaceAll("makeCompyut", "System.out.println");
                     }
 //                    else if (temp.contains("makeSukat(")){
 //                        
@@ -152,6 +152,8 @@ public class Iteu333aProject {
             PrintWriter pw = new PrintWriter("Output.java", "UTF-8");
             pw.println(strBuff+"\n}");
         }
+        
+        JOptionPane.showMessageDialog(null, strBuff);
     }
     
     }
