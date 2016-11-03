@@ -16,5 +16,6 @@ labas(a+b) //syntax error
 
 labas(d+e); //output is "Ed Pogi"
 
+makeSukat(d+e);
 
 makeCompyut(3+1/1); //should be 4

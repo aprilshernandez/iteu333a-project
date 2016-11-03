@@ -46,7 +46,6 @@ public class Iteu333aProject {
             
             while(input.hasNextLine()){
                 ++line;
-                System.out.println("LINE " + line);
                 str = input.nextLine();
                 
                 temp = str;
@@ -55,7 +54,6 @@ public class Iteu333aProject {
                 if (str.contains("//") && str.charAt(0) != '/' && strlen != 0){
                     for (int i=0; i<str.length(); i++){
                         if (str.charAt(i) == '/' && str.charAt(i-1) == '/'){
-                            System.out.println(str.substring(0, i-1)+"COMMENT");//CHECKING IF THE LINE CONTAINS A COMMENT
                             strlen = i-1;
                         }
                     }
@@ -135,10 +133,12 @@ public class Iteu333aProject {
                     else if (temp.contains("makeCompyut(")){
                         temp = temp.replaceAll("makeCompyut", "System.out.println");
                     }
-//                    else if (temp.contains("makeSukat(")){
-//                        
-//                        temp.replaceAll("makeSukat", "get");
-//                    }
+                    else if (temp.contains("makeSukat(")){
+                        int start, end;
+                        start = temp.indexOf('(');
+                        end = temp.indexOf(')');
+                        temp = "String temp = "+temp.substring(start+1, end)+";\ntemp.length;";
+                    }
                     
                 }
                 strBuff.append("\n"+temp);
