@@ -142,6 +142,7 @@ public class Iteu333aProject {
                     
                 }
                 strBuff.append("\n"+temp);
+
             }
             
         } catch (FileNotFoundException ex) {
